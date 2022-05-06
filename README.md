@@ -16,7 +16,7 @@
   * When you create your tokens, download the CSV file [**GeneratedToken.csv**] to keep these credentials.
 
 * [Download your secure connect bundle ZIP](https://dtsx.io/3OLdTjl)
-  * Download the secure connect bundle [**secure-connect-<db>.zip**] for the database that you created specifically for Temporal. These are unique to each database that you create within your Astra organization. This contains the information for Temporal to initialize a secured TLS connection between it and your Astra DB instance. 
+  * Download the secure connect bundle [**secure-connect-your_db.zip**] for the database that you created specifically for Temporal. These are unique to each database that you create within your Astra organization. This contains the information for Temporal to initialize a secured TLS connection between it and your Astra DB instance. 
 
 * **Find your Database ID**
   * Lastly, you want to get your Database ID. You can find this in one of two ways:
@@ -47,7 +47,7 @@ $ cd temporal-astra-helm-charts/
 ```
 
 * Move the `GeneratedToken.csv` file you downloaded earlier in to the `scb_token` folder
-* Move the `secure-connect-<db>.zip` bundle you downloaded earlier in to the `scb_token` folder and unzip it
+* Move the `secure-connect-your_db.zip` bundle you downloaded earlier in to the `scb_token` folder and unzip it
 * Update the **database-id** field in the `database-id.txt` file under `scb_token` folder
 
 * Now you can update the configurations and migrate the schema to Astra by running `./update_values_linux.sh` or `./update_values_mac.sh`
