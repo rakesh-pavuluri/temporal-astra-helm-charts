@@ -20,9 +20,9 @@ sed  -i -e 's/your-astra-token/'"$ASTRA_TOKEN"'/g' $working_dir/values/values.ca
 
 # Updating templates/astra-secret.yaml file with cert info
 
-sed -i -e 's/'"ca.crt: LS0tLS1CRUdJT..."'/'"ca.crt: $ca_cert"'/g' $working_dir/templates/astra-secret.yaml
-sed -i -e 's/'"cert: LS0tLS1CRUdJT..."'/'"cert: $cert"'/g' $working_dir/templates/astra-secret.yaml
-sed -i -e 's/'"key: LS0tLS1CRUdJT..."'/'"key: $key"'/g' $working_dir/templates/astra-secret.yaml
+echo " ca.crt: "$ca_cert >> $working_dir/templates/astra-secret.yaml
+echo " cert: "$cert  >> $working_dir/templates/astra-secret.yaml
+echo " key: "$key  >> $working_dir/templates/astra-secret.yaml
 
 # Updating helm charts
 
