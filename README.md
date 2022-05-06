@@ -35,6 +35,28 @@ This sequence assumes
   - [Helm v3](https://helm.sh)
   installed and able to access your cluster.
 
+
+
+# For Mac/Linux Users:
+
+* Clone this repo
+```sh
+$ git clone https://github.com/rakesh-pavuluri/temporal-astra-helm-charts.git
+
+$ cd temporal-astra-helm-charts/
+```
+
+* Move the `GeneratedToken.csv` file you downloaded earlier in to the `scb_token` folder
+* Move the `secure-connect-temporal` bundle you downloaded earlier in to the `scb_token` folder and unzip it
+* Update the **database-id:** field in the `database-id.txt` file under `scb_token` folder
+
+* Update the configurations by running `./update_values_linux.sh` or `./update_values_mac.sh`
+
+**Good! Now you have all the configurations updated with the required values and have successfully migrated the schema to Astra. Now you can skip step-2 and continue from step-3.**
+
+
+# For Windows Users:
+
 ## Migrating Temporal Schema to Astra
 
 * Clone this repo
@@ -63,7 +85,6 @@ docker-compose -f docker-compose-schema.yaml run temporal-admin-tools \
 docker-compose -f docker-compose-schema.yaml run temporal-admin-tools \
   -ep cql-proxy -k temporal_visibility update-schema -d schema/cassandra/visibility/versioned/
 ```
-
 
 ## Download Helm Chart Dependencies
 
