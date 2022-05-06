@@ -1,0 +1,67 @@
+server:
+  config:
+    logLevel: "debug,info"
+
+    numHistoryShards: 512
+
+    persistence:
+      default:
+        driver: "cassandra"
+
+        cassandra:
+          disableInitialHostLookup: true
+          tls:
+            enableHostVerification: false
+            enabled: true
+            certFile: "/etc/temporal/secret/cert"
+            keyFile: "/etc/temporal/secret/key"
+            caFile: "/etc/temporal/secret/ca.crt"
+          hosts: ["<your-hostname>"]
+          port: 29042
+          keyspace: temporal
+          user: "token"
+          password: "<your-astra-token>"
+          existingSecret: ""
+          replicationFactor: 1
+          consistency:
+            default:
+              consistency: "local_quorum"
+              serialConsistency: "local_serial"
+
+      visibility:
+        driver: "cassandra"
+
+        cassandra:
+          disableInitialHostLookup: true
+          tls:
+            enableHostVerification: false
+            enabled: true
+            certFile: "/etc/temporal/secret/cert"
+            keyFile: "/etc/temporal/secret/key"
+            caFile: "/etc/temporal/secret/ca.crt"
+          hosts: ["<your-hostname>"]
+          port: 29042
+          keyspace: temporal_visibility
+          user: "token"
+          password: "<your-astra-token>"
+          existingSecret: ""
+          replicationFactor: 1
+          consistency:
+            default:
+              consistency: "local_quorum"
+              serialConsistency: "local_serial"
+
+cassandra:
+  enabled: false
+
+mysql:
+  enabled: false
+
+postgresql:
+  enabled: false
+
+schema:
+  setup:
+    enabled: false
+  update:
+    enabled: false
