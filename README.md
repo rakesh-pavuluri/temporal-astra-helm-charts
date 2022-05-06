@@ -121,22 +121,22 @@ Now that you’ve gotten this far, we’re going to configure the Persistence La
 
         ```yaml
         # Update these
-                  hosts: ["<your-hostname>"]
+                  hosts: ["your-hostname"]
                   port: 29042
                   keyspace: temporal
                   user: "token"
-                  password: "<your-astra-token>" 
+                  password: "your-astra-token" 
         ```
 
       - For `temporal_visibility`
 
         ```yaml
         # Update these
-                  hosts: ["<your-hostname>"]
+                  hosts: ["your-hostname"]
                   port: 29042
                   keyspace: temporal_visibility
                   user: "token"
-                  password: "<your-astra-token>" 
+                  password: "your-astra-token" 
         ```
 
 * Save your values.cassandra.yaml file.
