@@ -13,7 +13,7 @@
 * [Create an Astra Token](https://dtsx.io/36VSEu1)
   * Tokens are required to authenticate against Astra with APIs or Drivers. These tokens can be used with multiple databases and can be configured to have specific permissions. In this example, you will create a token with **Admin Role**. 
   * Temporal uses this token to receive credentials and permission to access your database in a similar way to how Cassandra has a “user” and “password”, which we’ll discuss in more detail in Step 4 where you will configure the Persistence Layer in Temporal.
-  * When you create your tokens, download the CSV file to keep these credentials.
+  * When you create your tokens, download the CSV file [**GeneratedToken.csv**] to keep these credentials.
 
 * [Download your secure connect bundle ZIP](https://dtsx.io/3OLdTjl)
   * Download the secure connect bundle for the database that you created specifically for Temporal. These are unique to each database that you create within your Astra organization. This contains the information for Temporal to initialize a secured TLS connection between it and your Astra DB instance. 
