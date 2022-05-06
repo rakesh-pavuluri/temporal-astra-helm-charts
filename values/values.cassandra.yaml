@@ -16,11 +16,11 @@ server:
             certFile: "/etc/temporal/secret/cert"
             keyFile: "/etc/temporal/secret/key"
             caFile: "/etc/temporal/secret/ca.crt"
-          hosts: ["<your-hostname>"]
+          hosts: ["your-hostname"]
           port: 29042
           keyspace: temporal
           user: "token"
-          password: "<your-astra-token>"
+          password: "your-astra-token"
           existingSecret: ""
           replicationFactor: 1
           consistency:
@@ -39,11 +39,11 @@ server:
             certFile: "/etc/temporal/secret/cert"
             keyFile: "/etc/temporal/secret/key"
             caFile: "/etc/temporal/secret/ca.crt"
-          hosts: ["<your-hostname>"]
+          hosts: ["your-hostname"]
           port: 29042
           keyspace: temporal_visibility
           user: "token"
-          password: "<your-astra-token>"
+          password: "your-astra-token"
           existingSecret: ""
           replicationFactor: 1
           consistency:
