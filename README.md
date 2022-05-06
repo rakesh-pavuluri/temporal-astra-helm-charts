@@ -47,10 +47,10 @@ $ cd temporal-astra-helm-charts/
 ```
 
 * Move the `GeneratedToken.csv` file you downloaded earlier in to the `scb_token` folder
-* Move the `secure-connect-temporal` bundle you downloaded earlier in to the `scb_token` folder and unzip it
-* Update the **database-id:** field in the `database-id.txt` file under `scb_token` folder
+* Move the `secure-connect-temporal.zip` bundle you downloaded earlier in to the `scb_token` folder and unzip it
+* Update the **database-id** field in the `database-id.txt` file under `scb_token` folder
 
-* Update the configurations by running `./update_values_linux.sh` or `./update_values_mac.sh`
+* Now you can update the configurations and migrate the schema to Astra by running `./update_values_linux.sh` or `./update_values_mac.sh`
 
 **Good! Now you have all the configurations updated with the required values and have successfully migrated the schema to Astra. Now you can skip step-2 and continue from step-3.**
 
