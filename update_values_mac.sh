@@ -31,13 +31,9 @@ helm dependencies update
 # Migrating the schema to Astra
 
 docker-compose -f schema-migration/docker-compose-schema.yaml run temporal-admin-tools -ep cql-proxy -k temporal setup-schema -v 0.0
-sleep 20s
 
 docker-compose -f schema-migration/docker-compose-schema.yaml run temporal-admin-tools -ep cql-proxy -k temporal update-schema -d schema/cassandra/temporal/versioned/
-sleep 20s
 
 docker-compose -f schema-migration/docker-compose-schema.yaml run temporal-admin-tools -ep cql-proxy -k temporal_visibility setup-schema -v 0.0
-sleep 20s
 
 docker-compose -f schema-migration/docker-compose-schema.yaml run temporal-admin-tools -ep cql-proxy -k temporal_visibility update-schema -d schema/cassandra/visibility/versioned/
-sleep 20s
