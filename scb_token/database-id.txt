@@ -1,1 +1,1 @@
-database-id=3884d8d7-cebc-48c7-8d85-6d0f5f55b7a5
+database-id=<your-database-id>
